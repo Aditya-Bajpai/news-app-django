@@ -1,1 +1,1 @@
-# news-app-django
+# news-app-django using newsapi
