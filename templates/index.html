@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News-app</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+</head>
+<body>
+    <div class="jumbotron" style="color:black"> 
+        <h1 style ="color:white"> 
+            Get The latest news on my website 
+            </h1> 
+    </div>
+    <div class="container"> 
+        {%for news , desc , img in mylist %}
+                <img src="{{i}}" alt = "">
+                <h1>news:</h1> {{news}}
+                {{ value|linebreaks }} 
+                <h4>description:</h4>{{desc}}
+            {{ value|linebreaks }}
+        {% endfor %}
+    </div>
+</body>
+</html>
