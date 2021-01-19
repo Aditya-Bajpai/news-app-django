@@ -14,8 +14,8 @@
     </div>
     <div class="container"> 
         {%for news , desc , img in mylist %}
-                <img src="{{i}}" alt = "">
                 <h1>news:</h1> {{news}}
+                <img src="{{img}}" alt = "">
                 {{ value|linebreaks }} 
                 <h4>description:</h4>{{desc}}
             {{ value|linebreaks }}
