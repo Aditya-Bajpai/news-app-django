@@ -11,7 +11,9 @@
         <h1 style ="color:rgb(8, 6, 6)"> 
             Get The latest news on my website 
             </h1> 
+        <a href="{%url 'tech'%}">Check out the tech news</a>
     </div>
+    {%block content %}
     <div class="container"> 
         {%for news , desc , img in mylist %}
                 <h1>news:</h1> {{news}}
@@ -21,5 +23,6 @@
             {{ value|linebreaks }}
         {% endfor %}
     </div>
+    {%endblock%}
 </body>
 </html>
