@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
 </head>
 <body>
+    <style>
+        .img{
+            height:200px;
+        }
+    </style>
     <div class="jumbotron" style="color:black"> 
         <h1 style ="color:rgb(8, 6, 6)"> 
             Get The latest news on my website 
@@ -15,12 +20,15 @@
     </div>
     {%block content %}
     <div class="container"> 
-        {%for news , desc , img in mylist %}
+        {%for news , desc , img , pub , url in mylist %}
                 <h1>news:</h1> {{news}}
-                <img src="{{img}}" alt = "">
+                <img src="{{img}}" alt = "" class="img">
                 {{ value|linebreaks }} 
                 <h4>description:</h4>{{desc}}
+                {{ value|linebreaks }}
+                <p>{{pub}}</p>
             {{ value|linebreaks }}
+            <a href="{{url}}" target="_blank" rel="noreferrer noopener">Check Out The Full Story</a>
         {% endfor %}
     </div>
     {%endblock%}

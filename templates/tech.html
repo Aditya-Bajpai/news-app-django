@@ -7,12 +7,13 @@
             height : 200px;
         }
     </style>
-    {% for img , news , desc , pub in mytech %}
+    {% for img , news , desc , pub , url in mytech %}
         <h1>news:</h1> 
         <h5>{{news}}</h5>
         <img src="{{desc}}" alt="" class="img">
         <h7>{{img}}</h7>
         <p>{{pub}}</p>
+        <a href="{{url}}" target="_blank" rel="noreferrer noopener">Check Out The Full Story</a>
     {%endfor %}
 </div>
 {% endblock %}
